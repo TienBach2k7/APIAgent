@@ -3,18 +3,17 @@
 #include <string>
 #include "Result.h"
 #include "Task.h"
-using namespace std;
 class Agent
 {
     private:
-        string agentId;
-        string agentName;
+        std::string agentId;
+        std::string agentName;
     public:
-        Agent(string id, string name)
+        Agent(std::string id, std::string name)
         :agentId(id), agentName(name){}
         virtual ~Agent();
-        string getId() const {return agentId;}
-        string getName() const {return agentName;}
+        std::string getId() const {return agentId;}
+        std::string getName() const {return agentName;}
         virtual Result execute(Task& task) = 0;
 };
 #endif
